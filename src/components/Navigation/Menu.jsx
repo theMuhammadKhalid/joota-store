@@ -2,10 +2,18 @@ import React from "react";
 import styles from "./Menu.module.css";
 import Button from "@material-ui/core/Button";
 
+import SignIn from "../Account/SignIn.jsx";
+import SignUp from "../Account/SignUp.jsx";
+
 import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { menSelected, womenSelected } from "../../states/actions.js";
+import {
+  menSelected,
+  womenSelected,
+  changeOpenSignInDialog,
+  changeOpenSignUpDialog,
+} from "../../states/actions.js";
 
 export default function Menu({ styleMode }) {
   const { menActive, womenActive } = useSelector((state) => state);
@@ -55,18 +63,23 @@ export default function Menu({ styleMode }) {
         className={
           styleMode === "desktop" ? styles.accountDesktop : styles.accountMobile
         }
+        onClick={() => dispatch(changeOpenSignInDialog())}
       >
         Sign In
       </Button>
+      <SignIn />
+
       <Button
         color="inherit"
         variant="outlined"
         className={
           styleMode === "desktop" ? styles.accountDesktop : styles.accountMobile
         }
+        onClick={() => dispatch(changeOpenSignUpDialog())}
       >
         Sign Up
       </Button>
+      <SignUp />
     </React.Fragment>
   );
 }

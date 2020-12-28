@@ -27,6 +27,31 @@ export default function appReducer(state = appState, action) {
         menActive: false,
         womenActive: false,
       };
+    case actions.CHANGEOPENSIGNINDIALOG:
+      return state.openSignInDialog
+        ? {
+            ...state,
+            openSignInDialog: false,
+            openDrawer: false,
+          }
+        : {
+            ...state,
+            openSignInDialog: true,
+            openDrawer: false,
+          };
+    case actions.CHANGEOPENSIGNUPDIALOG:
+      return state.openSignUpDialog
+        ? {
+            ...state,
+            openSignUpDialog: false,
+            openDrawer: false,
+          }
+        : {
+            ...state,
+            openSignUpDialog: true,
+            openDrawer: false,
+          };
+
     default:
       return state;
   }

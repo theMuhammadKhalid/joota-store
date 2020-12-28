@@ -4,6 +4,8 @@ export const DRAWERCLOSEBTNCLICKED = "drawerCloseBtnClicked";
 export const MENSELECTED = "menSelected";
 export const WOMENSELECTED = "womenSelected";
 export const HOMESELECTED = "homeSelected";
+export const CHANGEOPENSIGNINDIALOG = "changeOpenSignInDialog";
+export const CHANGEOPENSIGNUPDIALOG = "changeOpenSignUpDialog";
 
 // action creators
 export const menuBtnClicked = () => ({
@@ -24,4 +26,12 @@ export const womenSelected = () => ({
 
 export const homeSelected = () => ({
   type: HOMESELECTED,
+});
+
+export const changeOpenSignInDialog = () => ({
+  type: CHANGEOPENSIGNINDIALOG,
+});
+
+export const changeOpenSignUpDialog = () => ({
+  type: CHANGEOPENSIGNUPDIALOG,
 });

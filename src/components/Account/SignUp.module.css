@@ -1,0 +1,9 @@
+.fullName {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.fullName > :first-child {
+  margin-right: 15px !important;
+}
