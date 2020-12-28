@@ -1,0 +1,35 @@
+.container {
+  width: 100vw;
+  height: calc(100vh - 75px);
+  background: url("../../images/website-cover.jpg") no-repeat top center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-end;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    background: url("../../images/website-cover-mobile.webp") no-repeat top
+      center;
+    background-size: 100% 100%;
+  }
+}
+
+.category {
+  text-decoration: none;
+  color: black;
+  font: bold 20px "Roboto", cursive;
+  padding: 10px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.category:hover {
+  color: white;
+  background: black;
+  border-color: white;
+}

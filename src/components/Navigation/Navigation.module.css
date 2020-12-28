@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+
+.container {
+  justify-content: space-between;
+  height: 75px !important;
+}
+
+.logo {
+  color: black;
+  font-family: "Yesteryear", cursive !important;
+  padding: 0px 0px 10px 10px;
+}

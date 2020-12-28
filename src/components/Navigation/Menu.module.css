@@ -1,0 +1,40 @@
+.categoryMobile {
+  text-decoration: none;
+  width: 100vw !important;
+  text-align: center;
+  color: black;
+  font: bold medium "Roboto", cursive !important;
+  padding: 20px 0px !important;
+  border-bottom: 1px solid rgb(151, 141, 141) !important;
+}
+
+.categoryaMobile {
+  text-decoration: underline !important;
+  width: 100vw !important;
+  text-align: center;
+  color: black;
+  font: bold medium "Roboto", cursive !important;
+  padding: 20px 0px !important;
+  border-bottom: 1px solid rgb(151, 141, 141) !important;
+}
+
+.accountMobile {
+  width: 100vw !important;
+  border: unset !important;
+  border-radius: 0px !important;
+  text-transform: capitalize !important;
+  padding: 20px 0px !important;
+  border-bottom: 1px solid rgb(151, 141, 141) !important;
+}
+
+.categoryDesktop {
+  text-decoration: none;
+  color: black;
+  font: bold medium "Roboto", cursive !important;
+  padding: 8px 25px;
+}
+
+.accountDesktop {
+  margin-right: 10px !important;
+  text-transform: capitalize !important;
+}
