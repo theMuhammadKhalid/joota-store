@@ -1,4 +1,8 @@
+import { useDispatch } from "react-redux";
+import { fetchProducts } from "./states/actions.js";
+
 import styles from "./App.module.css";
+
 import {
   Navigation,
   Home,
@@ -10,6 +14,9 @@ import {
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(fetchProducts());
+
   return (
     <div className={styles.container}>
       <Router>

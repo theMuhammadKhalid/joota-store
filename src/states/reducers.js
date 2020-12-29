@@ -51,6 +51,14 @@ export default function appReducer(state = appState, action) {
             openSignUpDialog: true,
             openDrawer: false,
           };
+    case actions.SETPRODUCTS:
+      return state.productsFetched
+        ? state
+        : {
+            ...state,
+            productsFetched: true,
+            products: action.payload,
+          };
 
     default:
       return state;

@@ -1,0 +1,43 @@
+.addToBag {
+  width: 100%;
+}
+
+.media {
+  height: 150px;
+}
+
+@media screen and (min-width: 375px) {
+  .media {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .media {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .media {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 725px) {
+  .media {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .media {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .media {
+    height: 250px;
+  }
+}
