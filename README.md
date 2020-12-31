@@ -11,6 +11,8 @@ then go to project directory and install all dependencies by running the command
 
 #### :racing_car: `npm install`
 
+then go to [commercejs](https://commercejs.com/) and get your public api key and write into __.env__ file like `REACT_APP_CHEC_PUBLIC_KEY={your_public_key}` and add some products there.
+
 now you have following
 
 ## :scroll: Available Scripts
