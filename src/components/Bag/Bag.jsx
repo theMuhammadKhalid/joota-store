@@ -16,7 +16,6 @@ export default function Bag() {
   }, []);
 
   const { cart } = useSelector((state) => state);
-  console.log(cart);
 
   return Object.keys(cart).length === 0 && cart.constructor === Object ? (
     <LinearProgress />

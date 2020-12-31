@@ -14,8 +14,6 @@
 # vs code
 /.vscode
 
-
-
 # misc
 .DS_Store
 /.env
