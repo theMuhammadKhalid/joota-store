@@ -43,28 +43,30 @@ export default function Bag() {
           Your bag is empty{" "}
         </Typography>
       )}
-      <div className={styles.bagFooter}>
-        <Typography className={styles.subtotal}>
-          Total: {cart.subtotal.formatted_with_symbol}
-        </Typography>
-        <span>
-          <Button
-            variant="contained"
-            color="secondary"
-            className={styles.footerBtn}
-            onClick={() => dispatch(emptyCart())}
-          >
-            Empty Cart
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            className={styles.footerBtn}
-          >
-            Checkout
-          </Button>
-        </span>
-      </div>
+      {cart.line_items.length ? (
+        <div className={styles.bagFooter}>
+          <Typography className={styles.subtotal}>
+            Total: {cart.subtotal.formatted_with_symbol}
+          </Typography>
+          <span>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={styles.footerBtn}
+              onClick={() => dispatch(emptyCart())}
+            >
+              Empty Cart
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              className={styles.footerBtn}
+            >
+              Checkout
+            </Button>
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 }
