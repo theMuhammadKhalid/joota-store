@@ -6,11 +6,11 @@ export const DRAWERCLOSEBTNCLICKED = "drawerCloseBtnClicked";
 export const MENSELECTED = "menSelected";
 export const WOMENSELECTED = "womenSelected";
 export const HOMESELECTED = "homeSelected";
+export const CARTSELECTED = "cartSelected";
 export const CHANGEOPENSIGNINDIALOG = "changeOpenSignInDialog";
 export const CHANGEOPENSIGNUPDIALOG = "changeOpenSignUpDialog";
-
-export const FETCHPRODUCTS = "fetchProducts";
 export const SETPRODUCTS = "setProducts";
+export const SETCART = "setCart";
 
 // action creators
 export const menuBtnClicked = () => ({
@@ -33,6 +33,10 @@ export const homeSelected = () => ({
   type: HOMESELECTED,
 });
 
+export const cartSelected = () => ({
+  type: CARTSELECTED,
+});
+
 export const changeOpenSignInDialog = () => ({
   type: CHANGEOPENSIGNINDIALOG,
 });
@@ -53,5 +57,52 @@ export const setProducts = (data) => {
   return {
     type: SETPRODUCTS,
     payload: data,
+  };
+};
+
+export const fetchCart = () => {
+  return (dispatch) => {
+    return commerce.cart.retrieve().then((cart) => {
+      dispatch(setCart(cart));
+    });
+  };
+};
+
+export const addToCart = (productId, quantity) => {
+  return (dispatch) => {
+    return commerce.cart.add(productId, quantity).then(({ cart }) => {
+      dispatch(setCart(cart));
+    });
+  };
+};
+
+export const updateCartQty = (productId, quantity) => {
+  return (dispatch) => {
+    return commerce.cart.update(productId, { quantity }).then(({ cart }) => {
+      dispatch(setCart(cart));
+    });
+  };
+};
+
+export const removeFromCart = (productId) => {
+  return (dispatch) => {
+    return commerce.cart.remove(productId).then(({ cart }) => {
+      dispatch(setCart(cart));
+    });
+  };
+};
+
+export const emptyCart = () => {
+  return (dispatch) => {
+    return commerce.cart.empty().then(({ cart }) => {
+      dispatch(setCart(cart));
+    });
+  };
+};
+
+export const setCart = (cart) => {
+  return {
+    type: SETCART,
+    payload: cart,
   };
 };

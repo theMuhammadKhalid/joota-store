@@ -23,15 +23,15 @@ export default function MenProducts() {
       <Typography variant="h4" gutterBottom>
         Men products
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
         {products
           .filter((value) => {
             return value.categories[0].name === "Men" ? true : false;
           })
-          .map((product) => (
-            <Grid item xs={12} sm={6} md={4}>
+          .map((product, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
               <MenProduct
-                key={product.id}
+                id={product.id}
                 name={product.name}
                 price={product.price.formatted_with_symbol}
                 imageURL={product.media.source}

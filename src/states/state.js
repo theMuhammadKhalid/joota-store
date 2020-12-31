@@ -6,6 +6,7 @@ let appState = {
   openSignUpDialog: false,
   productsFetched: false,
   products: [],
+  cart: {},
 };
 
 export default appState;

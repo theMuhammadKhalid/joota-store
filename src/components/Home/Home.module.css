@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 75px - 75px);
   background: url("../../images/website-cover.jpg") no-repeat top center;
   background-size: 100% 100%;
   display: flex;

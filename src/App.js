@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { fetchProducts } from "./states/actions.js";
+import { fetchProducts, fetchCart } from "./states/actions.js";
 
 import styles from "./App.module.css";
 
@@ -9,6 +9,7 @@ import {
   MenProducts,
   WomenProducts,
   Bag,
+  Footer,
 } from "./components/";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -16,6 +17,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   const dispatch = useDispatch();
   dispatch(fetchProducts());
+  dispatch(fetchCart());
 
   return (
     <div className={styles.container}>
@@ -35,6 +37,7 @@ function App() {
             <Bag />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

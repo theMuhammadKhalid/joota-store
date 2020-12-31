@@ -3,3 +3,4 @@ export { default as Home } from "./Home/Home.jsx";
 export { default as MenProducts } from "./MenProducts/MenProducts.jsx";
 export { default as WomenProducts } from "./WomenProducts/WomenProducts.jsx";
 export { default as Bag } from "./Bag/Bag.jsx";
+export { default as Footer } from "./Footer/Footer.jsx";

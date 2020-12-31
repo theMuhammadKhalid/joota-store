@@ -9,9 +9,14 @@ import {
   Button,
 } from "@material-ui/core/";
 
-export default function WomenProduct({ name, price, imageURL }) {
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../states/actions.js";
+
+export default function WomenProduct({ id, name, price, imageURL }) {
+  const dispatch = useDispatch();
+
   return (
-    <Card className={styles.conatainer}>
+    <Card className={styles.conatainer} key={id}>
       <CardMedia className={styles.media} image={imageURL} title={name} />
       <CardContent>
         <Typography align="center" gutterBottom>
@@ -22,7 +27,11 @@ export default function WomenProduct({ name, price, imageURL }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button className={styles.addToBag} variant="contained">
+        <Button
+          className={styles.addToBag}
+          variant="contained"
+          onClick={() => dispatch(addToCart(id, 1))}
+        >
           ADD TO BAG
         </Button>
       </CardActions>

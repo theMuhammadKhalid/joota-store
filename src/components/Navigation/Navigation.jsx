@@ -28,7 +28,7 @@ import {
 import { Link } from "react-router-dom";
 
 export default function Navigation() {
-  const { openDrawer } = useSelector((state) => state);
+  const { openDrawer, cart } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   return (
@@ -65,7 +65,7 @@ export default function Navigation() {
           </Hidden>
 
           <Link to="/bag">
-            <Badge badgeContent={2} color="primary">
+            <Badge badgeContent={cart.total_items} color="primary">
               <LocalMallOutlinedIcon style={{ color: "black" }} />
             </Badge>
           </Link>

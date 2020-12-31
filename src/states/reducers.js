@@ -27,6 +27,13 @@ export default function appReducer(state = appState, action) {
         menActive: false,
         womenActive: false,
       };
+    case actions.CARTSELECTED:
+      return {
+        ...state,
+        menActive: false,
+        womenActive: false,
+        openDrawer: false,
+      };
     case actions.CHANGEOPENSIGNINDIALOG:
       return state.openSignInDialog
         ? {
@@ -59,6 +66,11 @@ export default function appReducer(state = appState, action) {
             productsFetched: true,
             products: action.payload,
           };
+    case actions.SETCART:
+      return {
+        ...state,
+        cart: action.payload,
+      };
 
     default:
       return state;
