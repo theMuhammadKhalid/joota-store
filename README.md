@@ -1,5 +1,5 @@
 # Joota Store
-An ecommerce website which is created with the help of technologies like React, Redux,  Commercejs and Material-UI.
+An ecommerce website which is created with the help of technologies like React, Redux, React Router, Commercejs and Material-UI.
 
 ## :worried: How to download and use project ?
 
